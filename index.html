@@ -20,15 +20,40 @@
 	</head>
 	<body>
 
+		<div class="ribbon">
+  		<a href="https://github.com/thekeele">Fork me on GitHub</a>
+		</div>
+
 		<section id="header">
 			<header>
 				<h1>Welcome to</h1>
 				<p>Mark Keele's Web Lair</p>
 			</header>
 			<footer>
-				<a href="#banner" class="button style2 scrolly scrolly-centered">Give me a minute, I'm coding</a>
+				<!-- <a href="http://104.131.81.55:8000/" class="button style2 scrolly scrolly-centered">Minimal Mean Seed</a> -->
+				<a href="#banner" class="button style2 scrolly scrolly-centered">Scroll to enter the lair</a>
 			</footer>
 		</section>
+
+		<section id="banner">
+			<header>
+				<h2>Mark Keele</h2>
+			</header>
+			<p>You have found my internet domain. I'm currently a student and an aspiring web developer. Here you can see some of my projects and learn more about me.</p>
+			<footer>
+				<a href="#portfolio" class="button style2 scrolly">Check out some projects</a>
+			</footer>
+		</section>
+
+		<article id="portfolio" class="container box style1 left">
+			<a href="http://104.131.81.55:8000" class="image full"><img src="images/ninja1.png" alt="" /></a>
+			<div class="inner">
+				<header>
+					<h2><a href="http://104.131.81.55:8000">Minimal Mean Seed</a></h2>
+				</header>
+				<p>Minimal Mean Seed is a lightweight version of the, <a href="https://github.com/linnovate/mean">mean seed</a>. The <a href="http://mean.io">MEAN</a> seed is a fantastic all javascript web stack similar to LAMP or MAMP. There are some great full-fledged seeds, like <a href="https://github.com/pilwon/ultimate-seed">ultimate seed</a>, but this is for developers looking for a simple start. This seed connects to a <a href="http://www.mongodb.org/">mongodb database</a>, creates an <a href="http://expressjs.com/">express app</a>, starts a <a href="http://nodejs.org/">nodejs</a> RESTful API, and serves a single page <a href="https://angularjs.org/">AngularJS</a> app. Twitter <a href="http://getbootstrap.com/">Bootstrap 3</a> and <a href="https://fezvrasta.github.io/bootstrap-material-design/">Material Design</a> are used to create a slick, modern interface.</p>
+			</div>
+		</article>
 
 		<section id="footer">
 			<ul class="icons">
@@ -46,6 +71,7 @@
 				<p>Tip</p>
 				<li><a href="https://www.onename.io/thekeele" class="fa fa-bitcoin solo"><span>Bitcoin</span></a></li>
 			</ul>
+		</section>
 
 		<script>
 		  $('body').anystretch("images/bg.jpg", {speed: 150});
