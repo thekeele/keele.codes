@@ -12,6 +12,8 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
 		<script src="js/jquery.anystretch.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -20,9 +22,9 @@
 	</head>
 	<body>
 
-		<div class="ribbon">
-  		<a href="https://github.com/thekeele">Fork me on GitHub</a>
-		</div>
+		<!-- <div class="ribbon"> -->
+  		<!-- <a href="https://github.com/thekeele">Fork me on GitHub</a> -->
+		<!-- </div> -->
 
 		<section id="header">
 			<header>
@@ -30,23 +32,22 @@
 				<p>Mark Keele's Web Lair</p>
 			</header>
 			<footer>
-				<!-- <a href="http://104.131.81.55:8000/" class="button style2 scrolly scrolly-centered">Minimal Mean Seed</a> -->
 				<a href="#banner" class="button style2 scrolly scrolly-centered">Scroll or click to enter the lair</a>
 			</footer>
 		</section>
 
 		<section id="banner">
 			<header>
-				<h2>Mark Keele</h2>
+				<h2>Who Is Mark Keele?</h2>
 			</header>
-			<p>You have found my internet domain. I am currently a student and an aspiring web developer. Below you can see some of my projects and learn more about me.</p>
+			<p>Hi, I'm Mark and you have found my internet domain. I'm currently a masters student and an aspiring full stack web developer. Below you can see some of my projects and learn more about me.</p>
 			<footer>
-				<a href="#portfolio" class="button style2 scrolly">Show me the money</a>
+				<a href="#portfolio" class="button style2 scrolly">Show me the goods</a>
 			</footer>
 		</section>
 
 		<article id="portfolio" class="container box style1 left">
-			<a href="http://104.131.81.55:8001" class="image full"><img src="images/ninja1.png" alt="" /></a>
+			<a href="http://104.131.81.55:8001" class="image full"><img src="images/min-mean-seed.png" alt="" /></a>
 			<div class="inner">
 				<header>
 					<h2><a href="http://104.131.81.55:8001">Minimal Mean Seed</a></h2>
@@ -54,6 +55,87 @@
 				<p>Minimal Mean Seed is a lightweight version of the, <a href="https://github.com/linnovate/mean">mean seed</a>. The <a href="http://mean.io">MEAN</a> seed is a fantastic all javascript web stack similar to LAMP or MAMP. There are some great full-fledged seeds, like <a href="https://github.com/pilwon/ultimate-seed">ultimate seed</a>, but this is for developers looking for a simple start. This seed connects to a <a href="http://www.mongodb.org/">mongodb database</a>, creates an <a href="http://expressjs.com/">express app</a>, starts a <a href="http://nodejs.org/">nodejs</a> RESTful API, and serves a single page <a href="https://angularjs.org/">AngularJS</a> app. Twitter <a href="http://getbootstrap.com/">Bootstrap 3</a> and <a href="https://fezvrasta.github.io/bootstrap-material-design/">Material Design</a> are used to create a slick, modern interface.</p>
 			</div>
 		</article>
+
+		<article id="portfolio" class="container box style1 left">
+			<a href="http://104.131.81.55:8003" class="image full"><img src="images/lux-ex-machina.png" alt="" /></a>
+			<div class="inner">
+				<header>
+					<h2><a href="http://104.131.81.55:8003">Lux Ex Machina</a></h2>
+				</header>
+				<p>The light machine is an attempt to aid photographers by suggesting aperture and shutter speed based on a given amount of lumens. This app was designed as a in-browser phone app that would read lumens from a sensor running on an <a href="http://en.wikipedia.org/wiki/STM32">STM-32</a> board. Initially, when the app boots up it will suggest an aperture and shutter speed. Moving a slider will change the aperture (or shutter speed) and adjust the other setting so that a light balanced photo could be taken with the settings. A warning system is in place so that the user will be alerted when settings are computed to be out of balance. The goal is to provide a functionality similar to the Auto mode on DSLRs for manual cameras.</p>
+			</div>
+		</article>
+
+		<article id="portfolio" class="container box style1 left">
+			<a href="https://github.com/thekeele/talkbox" class="image full"><img src="images/talkbox.png" alt="" /></a>
+			<div class="inner">
+				<header>
+					<h2><a href="https://github.com/thekeele/talkbox">OSX Talkbox</a></h2>
+				</header>
+				<p>Did you know your MacBook can talk to you? No, I'm not referencing the famous Siri. The Darwin kernel has a system command, <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html">say</a>, that can be leveraged to verbally express your feelings. Talkbox is a simple <a href="https://www.ruby-lang.org/en/">Ruby</a> script that allows the user to say anything with a specific voice and volume. This app was created out of pure curiosity and can help with accessibility or to just have some old fashioned fun.</p>
+			</div>
+		</article>
+
+		<article id="portfolio" class="container box style1 left">
+			<a href="http://104.131.81.55:8002" class="image full"><img src="images/streaming-sentiment.png" alt="" /></a>
+			<div class="inner">
+				<header>
+					<h2><a href="http://104.131.81.55:8002">Streaming Sentiment</a></h2>
+				</header>
+				<p>The idea behind the Streaming Sentiment app is to <a href="https://dev.twitter.com/streaming/overview">stream</a> tweets from Twitter, with a given hashtag, and then analyze the sentiment of each tweet. This app was inspired by a <a href="http://arxiv.org/pdf/1010.3003v1.pdf">paper</a> that used tweets from Twitter to predict swings in the stock market. This is my latest project and still under development so be on the lookout for updates on my <a href="http://104.131.81.55:8000/2014/11/04/streaming-sentiment">blog</a>. </p>
+			</div>
+		</article>
+
+		<!-- Contact -->
+		<!-- <article class="container box style3"> -->
+
+			<!-- <header> -->
+				<!-- <h2>Contact</h2> -->
+				<!-- <p>Feel free to send me a message</p> -->
+			<!-- </header> -->
+
+			<!-- <form id="contact" name="contact" method="post"> -->
+
+				<!-- <div class="row 50%"> -->
+					<!-- <div class="6u"><input type="text" class="text" id="name" name="name" placeholder="Name" /></div> -->
+					<!-- <div class="6u"><input type="text" class="text" id="email" name="email" placeholder="Email" /></div> -->
+				<!-- </div> -->
+
+				<!-- <div class="row 50%"> -->
+					<!-- <div class="12u"> -->
+						<!-- <textarea id="message" name="message" placeholder="Message"></textarea> -->
+					<!-- </div> -->
+				<!-- </div> -->
+
+				<!-- <div class="row"> -->
+					<!-- <div class="12u"> -->
+	    			<!-- <div class="12u"><input type="text" class="text" name="captcha" placeholder="Name the grass eating animal that says MOO" required/></div> -->
+	    		<!-- </div> -->
+    		<!-- </div> -->
+
+				<!-- <div class="row"> -->
+					<!-- <div class="12u"> -->
+						<!-- <ul class="actions"> -->
+							<!-- <li><input type="submit" id="submit" name="submit" value="Send" /></li> -->
+						<!-- </ul> -->
+					<!-- </div> -->
+				<!-- </div> -->
+
+			<!-- </form> -->
+
+		<!-- </article> -->
+
+		<!-- <div id="success"> -->
+		  <!-- <span> -->
+		    <!-- <p>Your message was sent succssfully! I will be in touch as soon as I can.</p> -->
+		  <!-- </span> -->
+		<!-- </div> -->
+
+		<!-- <div id="error"> -->
+		  <!-- <span> -->
+		    <!-- <p>Something went wrong, try refreshing and submitting the form again.</p> -->
+		  <!-- </span> -->
+		<!-- </div> -->
 
 		<section id="footer">
 			<ul class="icons">
@@ -74,6 +156,8 @@
 				<li><a href="https://www.onename.io/thekeele" class="fa fa-bitcoin solo"><span>Bitcoin</span></a></li>
 			</ul>
 		</section>
+
+		<?php include('submit.php') ?>
 
 		<script>
 		  $('body').anystretch("images/bg.jpg", {speed: 150});
