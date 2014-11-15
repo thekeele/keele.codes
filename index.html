@@ -7,13 +7,6 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic" rel="stylesheet" type="text/css" />
 		<!-- [if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif] -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<script src="js/jquery.anystretch.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -21,11 +14,6 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body>
-
-		<!-- <div class="ribbon"> -->
-  		<!-- <a href="https://github.com/thekeele">Fork me on GitHub</a> -->
-		<!-- </div> -->
-
 		<section id="header">
 			<header>
 				<h1>Welcome to</h1>
@@ -86,57 +74,6 @@
 			</div>
 		</article>
 
-		<!-- Contact -->
-		<!-- <article class="container box style3"> -->
-
-			<!-- <header> -->
-				<!-- <h2>Contact</h2> -->
-				<!-- <p>Feel free to send me a message</p> -->
-			<!-- </header> -->
-
-			<!-- <form id="contact" name="contact" method="post"> -->
-
-				<!-- <div class="row 50%"> -->
-					<!-- <div class="6u"><input type="text" class="text" id="name" name="name" placeholder="Name" /></div> -->
-					<!-- <div class="6u"><input type="text" class="text" id="email" name="email" placeholder="Email" /></div> -->
-				<!-- </div> -->
-
-				<!-- <div class="row 50%"> -->
-					<!-- <div class="12u"> -->
-						<!-- <textarea id="message" name="message" placeholder="Message"></textarea> -->
-					<!-- </div> -->
-				<!-- </div> -->
-
-				<!-- <div class="row"> -->
-					<!-- <div class="12u"> -->
-	    			<!-- <div class="12u"><input type="text" class="text" name="captcha" placeholder="Name the grass eating animal that says MOO" required/></div> -->
-	    		<!-- </div> -->
-    		<!-- </div> -->
-
-				<!-- <div class="row"> -->
-					<!-- <div class="12u"> -->
-						<!-- <ul class="actions"> -->
-							<!-- <li><input type="submit" id="submit" name="submit" value="Send" /></li> -->
-						<!-- </ul> -->
-					<!-- </div> -->
-				<!-- </div> -->
-
-			<!-- </form> -->
-
-		<!-- </article> -->
-
-		<!-- <div id="success"> -->
-		  <!-- <span> -->
-		    <!-- <p>Your message was sent succssfully! I will be in touch as soon as I can.</p> -->
-		  <!-- </span> -->
-		<!-- </div> -->
-
-		<!-- <div id="error"> -->
-		  <!-- <span> -->
-		    <!-- <p>Something went wrong, try refreshing and submitting the form again.</p> -->
-		  <!-- </span> -->
-		<!-- </div> -->
-
 		<section id="footer">
 			<ul class="icons">
 				<p>Me</p>
@@ -147,8 +84,6 @@
 				<li><a href="https://twitter.com/thekeele" class="fa fa-twitter solo"><span>Twitter</span></a></li>
 				<li><a href="http://instagram.com/datkeele" class="fa fa-instagram solo"><span>Instagram</span></a></li>
 				<li><a href="https://www.flickr.com/photos/supercoldskater/" class="fa fa-flickr solo"><span>Flickr</span></a></li>
-				<!-- <li><a href="https://www.facebook.com/supercoldskater" class="fa fa-facebook solo"><span>Facebook</span></a></li> -->
-				<!-- <li><a href="https://plus.google.com/+MarkKeele" class="fa fa-google-plus solo"><span>Google+</span></a></li> -->
 				<p>Professional</p>
 				<li><a href="https://github.com/thekeele" class="fa fa-github solo"><span>GitHub</span></a></li>
 				<li><a href="https://www.linkedin.com/in/thekeele" class="fa fa-linkedin solo"><span>LinkedIn</span></a></li>
@@ -157,10 +92,14 @@
 			</ul>
 		</section>
 
-		<?php include('submit.php') ?>
-
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
 		<script>
-		  $('body').anystretch("images/bg.jpg", {speed: 150});
+		  // attach Backstrech as the body's background
+  		$.backstretch("images/bg.jpg");
 	  </script>
 	</body>
 </html>
