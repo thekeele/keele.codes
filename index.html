@@ -7,6 +7,11 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic" rel="stylesheet" type="text/css" />
 		<!-- [if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif] -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -92,14 +97,9 @@
 			</ul>
 		</section>
 
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.backstretch.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
 		<script>
 		  // attach Backstrech as the body's background
-  		$.backstretch("images/bg.jpg");
+  		$.backstretch("images/bg.jpg", {speed: 150});
 	  </script>
 	</body>
 </html>
