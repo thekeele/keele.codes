@@ -279,17 +279,17 @@
 
 			ul.icons li
 			{
-				display: inline-block;
+				/*display: inline-block;*/
 			}
 
 				ul.icons a
 				{
-					display: inline-block;
+					/*display: inline-block;*/
 					width: 2.5em;
 					height: 2.5em;
-					line-height: 2.5em;
+					/*line-height: 2.5em;*/
 					text-align: center;
-					border: 0;
+					padding: 1em;
 				}
 
 		ul.menu
