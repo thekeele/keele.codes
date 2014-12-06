@@ -284,12 +284,11 @@
 
 				ul.icons a
 				{
-					/*display: inline-block;*/
+					display: inline-block;
 					width: 2.5em;
 					height: 2.5em;
 					/*line-height: 2.5em;*/
 					text-align: center;
-					padding: 1em;
 				}
 
 		ul.menu
