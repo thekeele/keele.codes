@@ -7,16 +7,12 @@
 		<meta name="keywords" content="" />
 		<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic" rel="stylesheet" type="text/css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<!-- [if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif] -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
-    <!--[if lt IE 9]>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
-    <![endif]-->
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
 		</noscript>
+    <script src="https://use.fontawesome.com/4342594ddb.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.backstretch.min.js"></script>
 		<script src="js/jquery.poptrox.min.js"></script>
@@ -34,8 +30,6 @@
 		</script>
 	</head>
 	<body>
-    <a class="github-fork-ribbon" href="https://dev.keele.me" title="Server Status">Server Status</a>
-
 		<section id="header">
 			<header>
 				<h1>Mark Keele's</h1>
@@ -50,41 +44,41 @@
 			<header>
 				<h2>Who Is Mark Keele?</h2>
 			</header>
-			<p>Hi, I'm Mark and let me welcome you to my Internet domain. I'm currently a master's student in CS at IU Bloomington. Keep Scrolling to see a few projects and to find my contact info.</p>
+			<p>Hi, I'm Mark and let me welcome you to my Internet domain. I just finished my Master of Science in Computer Science degree at Indiana University. Currently, I'm looking to make the great pilgrimage to the west. Email me at <a href="mailto:mark@keele.me?subject=Contact Mark Keele">mark@keele.me</a>. Keep Scrolling to see a few projects and to find my digital footprint.</p>
 			<footer>
 				<a href="#portfolio-0" class="button style2 scrolly">Click then Scroll for the goods</a>
 			</footer>
 		</section>
 
-		<!-- <article id="portfolio" class="container box style1 left">
-			<a href="http://dev.keele.me:8001" class="image full"><img src="images/min-mean-seed.png" alt="" width="479" height="650" /></a>
-			<div class="inner">
-				<header>
-					<h2><a href="http://dev.keele.me:8001">Minimal Mean Seed</a></h2>
-				</header>
-				<p>Minimal Mean Seed is a lightweight version of the, <a href="https://github.com/linnovate/mean">mean seed</a>. The <a href="http://mean.io">MEAN</a> seed is a fantastic all JavaScript web stack similar to LAMP or MAMP. There are some great full-fledged seeds, like <a href="https://github.com/pilwon/ultimate-seed">ultimate seed</a>, but this is for developers looking for a simple start. This seed connects to a <a href="http://www.mongodb.org/">MongoDB database</a>, creates an <a href="http://expressjs.com/">ExpressJS app</a>, starts a <a href="http://nodejs.org/">NodeJS</a> RESTful API, and serves a single page <a href="https://angularjs.org/">AngularJS</a> app. Twitter <a href="http://getbootstrap.com/">Bootstrap 3</a> and <a href="https://fezvrasta.github.io/bootstrap-material-design/">Material Design</a> are used to create a slick, modern interface.</p>
-			<footer>
-				<a href="#banner" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
-				<a href="#portfolio-0" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
-			</footer>
-			</div>
-		</article> -->
-
 		<article id="portfolio-0" class="container box style1 left">
-		  <a href="http://dev.keele.me/lux" class="image full"><img src="images/lux-ex-machina.png" alt="" width="386" height="391" /></a>
+			<a href="https://dev.keele.me" class="image full"><img src="images/server_status.png" alt="" width="570" height="568" /></a>
 			<div class="inner">
 				<header>
-					<h2><a href="http://dev.keele.me/lux">Lux Ex Machina</a></h2>
+					<h2><a href="https://dev.keele.me">Server Status</a></h2>
 				</header>
-				<p>Lux Ex Machina, the light machine, is an attempt to aid photographers by suggesting aperture and shutter speed based on a given amount of lumens. This app was designed as an in-browser phone app that pairs with an <a href="http://en.wikipedia.org/wiki/STM32">embedded ARM system</a>. The embedded system would measure lumens and POST the results to an API that the web app could query. There's a lot of moving pieces here so check out the <span id="prezi"><a href="./prezi.html" data-poptrox="iframe,800x600">Prezi</a></span> for more detail. If you're feeling curious, click the preview on the right and have fun with the sliders.</p>
+				<p>The server status application provides critical information about my <a href="https://www.digitalocean.com/">Digital Ocean</a> server. A background service queries the server for uptime data, system component utilization, active processes, and attempts to fudge up my system. This data is exposed via a RESTful API to a SPA application to display. See the source code <a href="https://github.com/thekeele/server_status"> here</a>. Paramountly, Bruce Lee provides nuggets of wisdom.</p>
 			<footer>
 				<a href="#banner" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
 				<a href="#portfolio-1" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
 			</footer>
-		  </div>
+			</div>
 		</article>
 
 		<article id="portfolio-1" class="container box style1 left">
+		  <a href="https://dev.keele.me/lux" class="image full"><img src="images/lux-ex-machina.png" alt="" width="386" height="391" /></a>
+			<div class="inner">
+				<header>
+					<h2><a href="https://dev.keele.me/lux">Lux Ex Machina</a></h2>
+				</header>
+				<p>Lux Ex Machina, the light machine, is an attempt to aid photographers by suggesting aperture and shutter speed based on a given amount of lumens. This app was designed as an in-browser phone app that pairs with an <a href="http://en.wikipedia.org/wiki/STM32">embedded ARM system</a>. The embedded system would measure lumens and POST the results to an API that the web app could query. There's a lot of moving pieces here so check out the <span id="prezi"><a href="./prezi.html" data-poptrox="iframe,800x600">Prezi</a></span> for more detail. If you're feeling curious, click the preview on the right and have fun with the sliders.</p>
+			<footer>
+				<a href="#portfolio-0" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
+				<a href="#portfolio-2" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
+			</footer>
+		  </div>
+		</article>
+
+		<article id="portfolio-2" class="container box style1 left">
 			<a href="https://github.com/thekeele/talkbox" class="image full"><img src="images/talkbox.png" alt="" width="755" height="468" /></a>
 			<div class="inner">
 				<header>
@@ -92,8 +86,8 @@
 				</header>
 				<p>Did you know your MacBook could talk to you? No, I'm not referencing the infamous Siri. The Darwin kernel has a system command, <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html">say</a>, that can be leveraged to verbally express your feelings. Talkbox is a simple <a href="https://www.ruby-lang.org/en/">Ruby</a> script that allows the user to say anything with a specific voice and volume. This app was created out of pure curiosity and can help with accessibility or to just have some old fashioned fun.</p>
 			<footer>
-				<a href="#portfolio-0" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
-				<a href="#footer" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
+				<a href="#portfolio-1" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
+				<a href="#portfolio-3" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
 			</footer>
 			</div>
 		</article>
@@ -111,6 +105,23 @@
 			</footer>
 			</div>
 		</article> -->
+
+    <article id="portfolio-3" class="container box style1 left">
+      <a href="https://dev.keele.me/fingers" class="image full"><img src="images/fingers.png" alt="" width="570" height="568" /></a>
+      <div class="inner">
+        <header>
+          <h2><a href="https://dev.keele.me/fingers">Homogeneous Fingerprint Project</a></h2>
+        </header>
+        <p>Browser fingerprints, similar to human fingerprints, are a stable and unique identifier for an individual. As browser technology advances the amount of data and the coupling to the underlying hardware
+        strengthens. These unique identifiers pose a serious risk to anonymity on the web and little headway
+        has been made to combat this issue. This project offers a technique for homogenizing browser fingerprints
+        such that a user cannot be picked out of a group and an individuals devices cannot be distinguished.</p>
+      <footer>
+        <a href="#portfolio-2" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
+        <a href="#footer" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
+      </footer>
+      </div>
+    </article>
 
 		<!-- <article id="contact" class="container box style3">
 			<header>
@@ -157,7 +168,7 @@
 				<li>
 					<a href="https://github.com/thekeele" class="fa fa-github solo"><span>GitHub</span></a>
 					<a href="https://www.linkedin.com/in/thekeele" class="fa fa-linkedin solo"><span>LinkedIn</span></a>
-					<a href="https://dev.keele.me/resume" class="fa fa-file-pdf-o"><span>Resume</span></a>
+          <a href="https://dev.keele.me/resume" class="fa fa-file-pdf-o solo"><span>Resume</span></a>
 				</li>
 				<li><p>Tip</p></li>
 				<li><a href="https://www.onename.io/thekeele" class="fa fa-bitcoin solo"><span>Bitcoin</span></a></li>
