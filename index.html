@@ -2,196 +2,63 @@
 <html>
 	<head>
 		<title>Mark Keele</title>
+
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic" rel="stylesheet" type="text/css" />
+
 		<link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
 		<!-- [if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif] -->
 		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
 		</noscript>
+
     <script src="https://use.fontawesome.com/4342594ddb.js"></script>
 		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.backstretch.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-57386263-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
 	</head>
 	<body>
-		<section id="header">
-			<header>
-				<h1>Mark Keele's</h1>
-				<p>Web Lair</p>
-			</header>
-			<footer>
-				<a href="#banner" class="button style2 scrolly scrolly-centered">Click or Scroll to enter the lair</a>
-			</footer>
-		</section>
-
-		<section id="banner">
-			<header>
-				<h2>Who Is Mark Keele?</h2>
-			</header>
-			<p>Hi, I'm Mark and let me welcome you to my Internet domain. I just finished my Master of Science in Computer Science degree at Indiana University. Currently, I'm looking to make the great pilgrimage to the west. Email me at <a href="mailto:mark@keele.me?subject=Contact Mark Keele">mark@keele.me</a>. Keep Scrolling to see a few projects and to find my digital footprint.</p>
-			<footer>
-				<a href="#portfolio-0" class="button style2 scrolly">Click then Scroll for the goods</a>
-			</footer>
-		</section>
-
-		<article id="portfolio-0" class="container box style1 left">
-			<a href="https://dev.keele.me" class="image full"><img src="images/server_status.png" alt="" width="570" height="568" /></a>
-			<div class="inner">
-				<header>
-					<h2><a href="https://dev.keele.me">Server Status</a></h2>
-				</header>
-				<p>The server status application provides critical information about my <a href="https://www.digitalocean.com/">Digital Ocean</a> server. A background service queries the server for uptime data, system component utilization, active processes, and attempts to fudge up my system. This data is exposed via a RESTful API to a SPA application to display. See the source code <a href="https://github.com/thekeele/server_status"> here</a>. Paramountly, Bruce Lee provides nuggets of wisdom.</p>
-			<footer>
-				<a href="#banner" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
-				<a href="#portfolio-1" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
-			</footer>
-			</div>
-		</article>
-
-		<article id="portfolio-1" class="container box style1 left">
-		  <a href="https://dev.keele.me/lux" class="image full"><img src="images/lux-ex-machina.png" alt="" width="386" height="391" /></a>
-			<div class="inner">
-				<header>
-					<h2><a href="https://dev.keele.me/lux">Lux Ex Machina</a></h2>
-				</header>
-				<p>Lux Ex Machina, the light machine, is an attempt to aid photographers by suggesting aperture and shutter speed based on a given amount of lumens. This app was designed as an in-browser phone app that pairs with an <a href="http://en.wikipedia.org/wiki/STM32">embedded ARM system</a>. The embedded system would measure lumens and POST the results to an API that the web app could query. There's a lot of moving pieces here so check out the <span id="prezi"><a href="./prezi.html" data-poptrox="iframe,800x600">Prezi</a></span> for more detail. If you're feeling curious, click the preview on the right and have fun with the sliders.</p>
-			<footer>
-				<a href="#portfolio-0" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
-				<a href="#portfolio-2" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
-			</footer>
-		  </div>
-		</article>
-
-		<article id="portfolio-2" class="container box style1 left">
-			<a href="https://github.com/thekeele/talkbox" class="image full"><img src="images/talkbox.png" alt="" width="755" height="468" /></a>
-			<div class="inner">
-				<header>
-					<h2><a href="https://github.com/thekeele/talkbox">OSX Talkbox</a></h2>
-				</header>
-				<p>Did you know your MacBook could talk to you? No, I'm not referencing the infamous Siri. The Darwin kernel has a system command, <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html">say</a>, that can be leveraged to verbally express your feelings. Talkbox is a simple <a href="https://www.ruby-lang.org/en/">Ruby</a> script that allows the user to say anything with a specific voice and volume. This app was created out of pure curiosity and can help with accessibility or to just have some old fashioned fun.</p>
-			<footer>
-				<a href="#portfolio-1" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
-				<a href="#portfolio-3" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
-			</footer>
-			</div>
-		</article>
-
-		<!-- <article id="portfolio-2" class="container box style1 left">
-			<a href="http://dev.keele.me:8002" class="image full"><img src="images/streaming-sentiment.png" alt="" width="570" height="568" /></a>
-			<div class="inner">
-				<header>
-					<h2><a href="http://dev.keele.me:8002">Streaming Sentiment</a></h2>
-				</header>
-				<p>The idea behind the Streaming Sentiment app is to <a href="https://dev.twitter.com/streaming/overview">stream</a> tweets from Twitter, with a given hashtag, and then analyze the sentiment of each tweet. A <a href="http://arxiv.org/pdf/1010.3003v1.pdf">paper</a> that used tweets from Twitter to predict swings in the stock market inspired this app. This is my latest project and still under development so be on the lookout for updates on my <a href="http://dev.keele.me:8000/2014/11/04/streaming-sentiment">blog</a>.</p>
-			<footer>
-				<a href="#portfolio-1" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
-				<a href="#contact" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
-			</footer>
-			</div>
-		</article> -->
-
-    <article id="portfolio-3" class="container box style1 left">
-      <a href="https://dev.keele.me/fingers" class="image full"><img src="images/fingers.png" alt="" width="570" height="568" /></a>
-      <div class="inner">
-        <header>
-          <h2><a href="https://dev.keele.me/fingers">Homogeneous Fingerprint Project</a></h2>
-        </header>
-        <p>Browser fingerprints, similar to human fingerprints, are a stable and unique identifier for an individual. As browser technology advances the amount of data and the coupling to the underlying hardware
-        strengthens. These unique identifiers pose a serious risk to anonymity on the web and little headway
-        has been made to combat this issue. This project offers a technique for homogenizing browser fingerprints
-        such that a user cannot be picked out of a group and an individuals devices cannot be distinguished.</p>
-      <footer>
-        <a href="#portfolio-2" class="fa fa-angle-double-up solo scrolly" style="float: left;"><span>up</span></a>
-        <a href="#footer" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
-      </footer>
-      </div>
-    </article>
-
-		<!-- <article id="contact" class="container box style3">
-			<header>
-				<h2>Contact</h2>
-				<p>Ask your heart away</p>
-			</header>
-			<form action="https://fwdform.herokuapp.com/user/cf065566-72de-4a29-83a7-997dace48fc2" method="post">
-				<div class="row 50%">
-					<div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
-					<div class="6u"><input type="text" class="text" name="email" placeholder="Email" /></div>
-				</div>
-				<div class="row 50%">
-					<div class="12u">
-						<textarea name="message" placeholder="Message" cols="40" rows="5"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="12u">
-						<ul class="actions">
-							<li><input class="button style3 scrolly scrolly-centered" type="submit" value="Send Message"></li>
-						</ul>
-					</div>
-				</div>
-			</form>
-			<footer>
-				<a href="#portfolio-0" class="fa fa-angle-double-up solo scrolly"><span>up</span></a>
-				<a href="#footer" class="fa fa-angle-double-down solo scrolly" style="float: right;"><span>down</span></a>
-			</footer>
-		</article> -->
-
 		<section id="footer">
 			<ul class="icons">
-				<li><h6>Digital Footprint</h6></li>
-				<li><a href="http://about.me/markkeele" class="fa fa-male solo"><span>about.me</span></a></li>
-				<li><p>Blog</p></li>
-				<li><a href="https://dev.keele.me/blog" class="fa fa-rss-square solo"><span>Ghost</span></a></li>
-				<li><p>Social</p></li>
 				<li>
-					<a href="https://twitter.com/thekeele" class="fa fa-twitter solo"><span>Twitter</span></a>
-					<a href="http://instagram.com/datkeele" class="fa fa-instagram solo"><span>Instagram</span></a>
-					<a href="https://www.flickr.com/photos/supercoldskater/" class="fa fa-flickr solo"><span>Flickr</span></a>
+				  <a href="https://about.me/markkeele" class="fa fa-male solo fa-2x" style="color:blanchedalmond">
+				    <span>developer</span>
+				  </a>
 				</li>
-				<li><p>Professional</p></li>
+
 				<li>
-					<a href="https://github.com/thekeele" class="fa fa-github solo"><span>GitHub</span></a>
-					<a href="https://www.linkedin.com/in/thekeele" class="fa fa-linkedin solo"><span>LinkedIn</span></a>
-          <a href="https://dev.keele.me/resume" class="fa fa-file-pdf-o solo"><span>Resume</span></a>
+				  <a href="https://dev.keele.me" class="fa fa-terminal solo fa-2x" style="color:lawngreen">
+				  	<span>dev site</span>
+				  </a>
 				</li>
-				<li><p>Tip</p></li>
-				<li><a href="https://www.onename.io/thekeele" class="fa fa-bitcoin solo"><span>Bitcoin</span></a></li>
+
+				<li>
+				  <a href="https://dev.keele.me/blog" class="fa fa-rss solo fa-2x" style="color:darkorange">
+				    <span>blog</span>
+				  </a>
+				</li>
+
+				<li>
+					<a href="https://github.com/thekeele" class="fa fa-github solo fa-2x" style="color:black">
+					  <span>code</span>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.onename.io/thekeele" class="fa fa-bitcoin solo fa-2x" style="color:orange">
+						<span>bitcoin</span>
+					</a>
+					<a href="https://keybase.io/thekeele" class="fa fa-key solo fa-2x" style="color:dodgerblue">
+						<span>keybase</span>
+					</a>
+				</li>
 			</ul>
-			<div class="copyright">
-				<ul class="menu">
-          <li>Made with
-            <span class="fa-stack fa-1x">
-              <i class="fa fa-heart fa-stack-1x" style="color:red"></i>
-            </span> by Mark Keele
-          </li>
-          <li><a href="http://html5up.net">HTML5 UP</a></li>
-          <li><a href="#header" class="fa fa-chevron-up solo scrolly"><span>top</span></a></li>
-				</ul>
-			</div>
+
+			<p><small>with <span class="fa-stack fa-1x">
+	      <i class="fa fa-heart fa-stack-1x" style="color:red"></i>
+	    </span> love</small></p>
 		</section>
-
-    <script>
-      // attach Backstretch as the body's background
-      $.backstretch("images/bg.jpg", {speed: 150});
-
-      var prezi = $('#prezi');
-      prezi.poptrox();
-    </script>
 	</body>
 </html>

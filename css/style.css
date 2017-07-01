@@ -1223,7 +1223,7 @@
 				border-left: solid 1px #fff;
 			}
 
-			/*#header footer:before
+			#header footer:before
 			{
 				content: '';
 				display: block;
@@ -1235,7 +1235,7 @@
 				margin-left: -45px;
 				margin-bottom: -33px;
 				background: url('images/arrow.svg') no-repeat;
-			}*/
+			}
 
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -1302,7 +1302,7 @@
 		color: #fff;
 		text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
 		text-align: center;
-		margin: 4.5em 0 0 0;
+		padding-top: 4.5em;
 	}
 
 		#footer:after
