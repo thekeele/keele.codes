@@ -1,6 +1,6 @@
-web_lair
+keele_projection
 ========
 
-Mark Keele's Web Lair
+keele_projection
 
 http://keele.me
