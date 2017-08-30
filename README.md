@@ -1,6 +1,4 @@
-keele_projection
+Keele codes
 ========
 
-keele_projection
-
-http://keele.me
+Landing page for mark's internet presence
