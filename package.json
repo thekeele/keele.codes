@@ -1,0 +1,20 @@
+{
+  "name": "keele.codes",
+  "version": "1.0.0",
+  "description": "marks internet presence",
+  "author": "Mark Keele <mark@keele.codes> (https://keele.codes)",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "bulma": "^0.6.0",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.1"
+  },
+  "scripts": {
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-build": "node-sass _sass/main.scss css/main.css",
+    "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "deploy": "npm run css-deploy",
+    "start": "npm run css-watch"
+  }
+}
