@@ -10210,6 +10210,18 @@ label.panel-block {
   background: url('/img/brick.jpg') center center;
   background-size: cover;
 }*/
+@media all and (min-width: 1067px) {
+  body {
+    font-size: 30px; } }
+
+@media all and (min-width: 534px) and (max-width: 1066px) {
+  body {
+    font-size: 20px; } }
+
+@media all and (max-width: 533px) {
+  body {
+    font-size: 8px; } }
+
 .typewriter h1 {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -10221,7 +10233,6 @@ label.panel-block {
   /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em;
   /* Adjust as needed */
-  font-size: 30px;
   animation: typing 8s steps(40) 1s infinite alternate both, blink-caret 0.75s step-end infinite; }
 
 /* The typing effect */

@@ -1,10 +1,27 @@
+@media all and (min-width: 1067px) {
+  body {
+    font-size: 30px;
+  }
+}
+
+@media all and (min-width: 534px) and (max-width: 1066px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 533px) {
+  body {
+    font-size: 8px;
+  }
+}
+
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typewriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  font-size: 30px;
   animation:
     typing 8s steps(40) 1s infinite alternate both,
     blink-caret .75s step-end infinite;
