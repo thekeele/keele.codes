@@ -1,9 +1,28 @@
-.has-bg-img-fuji {
-  background: url('/img/fuji.jpg') center center;
-  background-size: cover;
+@media (min-width: 1067px) {
+    .has-bg-img-mark {
+    background: url('/img/mark_large.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
 }
 
-.has-bg-img-eclipse {
+@media (min-width: 534px) and (max-width: 1066px) {
+    .has-bg-img-mark {
+    background: url('/img/mark_medium.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 533px) {
+    .has-bg-img-mark {
+    background: url('/img/mark_small.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/*.has-bg-img-eclipse {
   background: url('/img/eclipse.jpg') center center;
   background-size: cover;
 }
@@ -26,5 +45,5 @@
 .has-bg-img-brick {
   background: url('/img/brick.jpg') center center;
   background-size: cover;
-}
+}*/
 
