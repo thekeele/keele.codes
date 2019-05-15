@@ -10170,46 +10170,70 @@ label.panel-block {
 
 @media (min-width: 1067px) {
   .has-bg-img-mark {
-    background: url("/img/mark_large.jpg");
-    background-size: cover;
-    background-position: center top; } }
+    background: url("/img/mark_large.jpg") center top/cover; }
+  .has-bg-img-engineer {
+    background: url("/img/engineer_large.jpg") center center/cover; }
+  .has-bg-img-bitfeels {
+    background: url("/img/bitfeels_large.jpg") center top/cover; }
+  .has-bg-img-tullahoma {
+    background: url("/img/tullahoma_large.jpg") center left/cover; }
+  .has-bg-img-mtsu {
+    background: url("/img/mtsu_large.jpg") center center/cover; }
+  .has-bg-img-ornl {
+    background: url("/img/ornl_large.jpg") center top/cover; }
+  .has-bg-img-indiana {
+    background: url("/img/indiana_large.jpg") center center/cover; }
+  .has-bg-img-montana {
+    background: url("/img/montana_large.jpg") center center/cover; }
+  .has-bg-img-contact {
+    background: url("/img/contact_large.jpg") center left/cover; }
+  .has-bg-img-love {
+    background: url("/img/love_large.jpg") center center/cover; } }
 
 @media (min-width: 534px) and (max-width: 1066px) {
   .has-bg-img-mark {
-    background: url("/img/mark_medium.jpg");
-    background-size: cover;
-    background-position: center top; } }
+    background: url("/img/mark_medium.jpg") center top/cover; }
+  .has-bg-img-engineer {
+    background: url("/img/engineer_medium.jpg") center center/cover; }
+  .has-bg-img-bitfeels {
+    background: url("/img/bitfeels_medium.jpg") center top/cover; }
+  .has-bg-img-tullahoma {
+    background: url("/img/tullahoma_medium.jpg") center left/cover; }
+  .has-bg-img-mtsu {
+    background: url("/img/mtsu_medium.jpg") center center/cover; }
+  .has-bg-img-ornl {
+    background: url("/img/ornl_medium.jpg") center top/cover; }
+  .has-bg-img-indiana {
+    background: url("/img/indiana_medium.jpg") center center/cover; }
+  .has-bg-img-montana {
+    background: url("/img/montana_medium.jpg") center center/cover; }
+  .has-bg-img-contact {
+    background: url("/img/contact_medium.jpg") center left/cover; }
+  .has-bg-img-love {
+    background: url("/img/love_medium.jpg") center center/cover; } }
 
 @media (max-width: 533px) {
   .has-bg-img-mark {
-    background: url("/img/mark_small.jpg");
-    background-size: cover;
-    background-position: center top; } }
+    background: url("/img/mark_small.jpg") center top/cover; }
+  .has-bg-img-engineer {
+    background: url("/img/engineer_small.jpg") center center/cover; }
+  .has-bg-img-bitfeels {
+    background: url("/img/bitfeels_small.jpg") center top/cover; }
+  .has-bg-img-tullahoma {
+    background: url("/img/tullahoma_small.jpg") center left/cover; }
+  .has-bg-img-mtsu {
+    background: url("/img/mtsu_small.jpg") center center/cover; }
+  .has-bg-img-ornl {
+    background: url("/img/ornl_small.jpg") center top/cover; }
+  .has-bg-img-indiana {
+    background: url("/img/indiana_small.jpg") center center/cover; }
+  .has-bg-img-montana {
+    background: url("/img/montana_small.jpg") center center/cover; }
+  .has-bg-img-contact {
+    background: url("/img/contact_small.jpg") center left/cover; }
+  .has-bg-img-love {
+    background: url("/img/love_small.jpg") center center/cover; } }
 
-/*.has-bg-img-eclipse {
-  background: url('/img/eclipse.jpg') center center;
-  background-size: cover;
-}
-
-.has-bg-img-lake {
-  background: url('/img/lake.jpg') center center;
-  background-size: cover;
-}
-
-.has-bg-img-moon {
-  background: url('/img/moon.jpg') center center;
-  background-size: cover;
-}
-
-.has-bg-img-color {
-  background: url('/img/color.jpg') center center;
-  background-size: cover;
-}
-
-.has-bg-img-brick {
-  background: url('/img/brick.jpg') center center;
-  background-size: cover;
-}*/
 @media all and (min-width: 1067px) {
   body {
     font-size: 30px; } }
