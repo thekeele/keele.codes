@@ -10249,7 +10249,7 @@ label.panel-block {
 .typewriter h1 {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
+  border-right: .15em solid white;
   /* The typewriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
@@ -10271,4 +10271,4 @@ label.panel-block {
   from, to {
     border-color: transparent; }
   50% {
-    border-color: orange; } }
+    border-color: white; } }
