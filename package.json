@@ -9,7 +9,7 @@
     "fstream": ">=1.0.12",
     "hover.css": "^2.3.2",
     "lodash": "^4.17.15",
-    "node-sass": "^4.14.0",
+    "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.1",
     "randomatic": ">=3.0.0",
     "tar": "^6.0.2"
