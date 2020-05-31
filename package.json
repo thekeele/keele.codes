@@ -12,7 +12,8 @@
     "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.1",
     "randomatic": ">=3.0.0",
-    "tar": "^6.0.2"
+    "tar": "^6.0.2",
+    "ecstatic": ">=4.1.2"
   },
   "scripts": {
     "css-deploy": "npm run css-build && npm run css-postcss",
