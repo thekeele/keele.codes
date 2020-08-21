@@ -22,6 +22,5 @@ jobs:
         port: ${{ secrets.PORT }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          ls
           cd keele.codes/
           git pull origin master
