@@ -1,4 +1,4 @@
-name: Keele Codes CI
+name: keele.codes CI
 
 on:
   push:
