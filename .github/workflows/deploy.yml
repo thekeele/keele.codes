@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Deploy release to keele.codes
+    - name: Deploy Release to keele.codes
       uses: appleboy/ssh-action@master
       with:
         script_stop: true
