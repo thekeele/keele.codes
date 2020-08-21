@@ -1,0 +1,22 @@
+name: Keele Codes CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+    
+    steps:
+    - name: Deploy release to keele.codes
+      uses: appleboy/ssh-action@master
+      with:
+        script_stop: true
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd keele.codes
+          git pull origin master
