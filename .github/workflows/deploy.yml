@@ -13,11 +13,11 @@ jobs:
       uses: appleboy/ssh-action@v0.1.3
       with:
         script_stop: true
-        debug: true 
+        debug: true
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        port: 22 
+        port: ${{ secrets.PORT }}
         script: |
           pwd
           ls
