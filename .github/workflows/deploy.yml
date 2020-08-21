@@ -7,16 +7,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-16.04
-    
+
     steps:
     - name: Deploy release to keele.codes
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v0.1.3
       with:
         script_stop: true
+        debug: true 
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd keele.codes
+          pwd
+          ls
+          cd keele.codes/
           git pull origin master
