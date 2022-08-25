@@ -1,26 +1,23 @@
-name: keele.codes CI
+name: Pull Website
 
 on:
   push:
-    branches: [ master ]
+    branches:
+    - master
 
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/master'
-
-    name: Deploy Release
     runs-on: ubuntu-latest
-
     steps:
-    - name: Deploy Release to keele.codes
-      uses: appleboy/ssh-action@v0.1.4
+    - name: Pull Website for keele.codes
+      uses: appleboy/ssh-action@v0.1.5
       with:
-        script_stop: true
+        debug: true
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        passphrase: ${{ secrets.PASSPHRASE }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.KEY }}
+        passphrase: ${{ secrets.PASS }}
         script: |
           cd keele.codes/
           git pull origin master
