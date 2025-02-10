@@ -4,7 +4,7 @@ defmodule KeeleCodesWeb.DojoLive do
   def render(assigns) do
     ~H"""
     <div class="flex h-screen">
-      <div class="flex flex-row my-auto w-full justify-around">
+      <div class="flex flex-row max-md:flex-col md:my-auto max-md:mx-auto w-full justify-around items-center">
         <.profile_pic />
         <.code_links />
         <.career_links />
