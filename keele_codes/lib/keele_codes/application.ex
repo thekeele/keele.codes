@@ -11,8 +11,7 @@ defmodule KeeleCodes.Application do
       KeeleCodesWeb.Telemetry,
       KeeleCodes.Repo,
       {Ecto.Migrator,
-        repos: Application.fetch_env!(:keele_codes, :ecto_repos),
-        skip: skip_migrations?()},
+       repos: Application.fetch_env!(:keele_codes, :ecto_repos), skip: skip_migrations?()},
       {DNSCluster, query: Application.get_env(:keele_codes, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: KeeleCodes.PubSub},
       # Start the Finch HTTP client for sending emails

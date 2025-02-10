@@ -2,16 +2,41 @@
 <html lang="en" class="[scrollbar-gutter:stable]">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mark keele codes</title>
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title default="KeeleCodes" suffix=" · Phoenix Framework">
-      {assigns[:page_title]}
-    </.live_title>
+
+    <meta name="author" content="Mark Keele" />
+    <meta
+      name="keywords"
+      content="software,engineer,programming,code,coding,development,elixir,phoenix,erlang"
+    />
+    <meta name="description" content="mark keele codes up artisan crafted software with love" />
+
+    <meta property="og:title" content="mark keele codes" />
+    <meta property="og:image" content={~p"/images/logo.png"} />
+    <meta
+      property="og:description"
+      content="mark keele codes up artisan crafted software with love"
+    />
+    <meta name="twitter:title" content="mark keele codes" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href={~p"/images/apple-touch-icon.png"} />
+    <link rel="icon" type="image/png" sizes="32x32" href={~p"/images/favicon-32x32.png"} />
+    <link rel="icon" type="image/png" sizes="16x16" href={~p"/images/favicon-16x16.png"} />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#040404" />
+    <meta name="apple-mobile-web-app-title" content="mark keele codes" />
+    <meta name="application-name" content="mark keele codes" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#000000" />
+
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
   </head>
-  <body class="bg-white">
+  <body class="bg-black">
     {@inner_content}
   </body>
 </html>
