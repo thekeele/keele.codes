@@ -19,7 +19,8 @@ defmodule KeeleCodes.Application do
       # Start a worker by calling: KeeleCodes.Worker.start_link(arg)
       # {KeeleCodes.Worker, arg},
       # Start to serve requests, typically the last entry
-      KeeleCodesWeb.Endpoint
+      KeeleCodesWeb.Endpoint,
+      {KeeleCodes.SentimentServer, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

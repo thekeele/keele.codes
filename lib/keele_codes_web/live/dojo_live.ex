@@ -1,6 +1,18 @@
 defmodule KeeleCodesWeb.DojoLive do
   use KeeleCodesWeb, :live_view
 
+  def mount(_params, _session, socket) do
+    if connected?(socket) do
+      Phoenix.PubSub.subscribe(KeeleCodes.PubSub, "sentiment")
+    end
+
+    {:ok, socket}
+  end
+
+  def handle_info(_msg, socket) do
+    {:noreply, socket}
+  end
+
   def render(assigns) do
     ~H"""
     <div class="flex h-screen">
