@@ -80,3 +80,8 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+# configure XApi
+config :keele_codes, XApi,
+  adapter: XApi.DevAdapter,
+  bearer_token: nil
