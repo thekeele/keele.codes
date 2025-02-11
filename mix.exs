@@ -58,7 +58,9 @@ defmodule KeeleCodes.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:exsync, "~> 0.4.1", only: :dev}
+      {:exsync, "~> 0.4.1", only: :dev},
+      {:bumblebee, "~> 0.6.0"},
+      {:exla, ">= 0.0.0"}
     ]
   end
 
