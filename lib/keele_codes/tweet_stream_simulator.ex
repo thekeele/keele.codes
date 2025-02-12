@@ -2,6 +2,8 @@ defmodule KeeleCodes.TweetStreamSimulator do
   @moduledoc false
   use GenServer
 
+  alias KeeleCodes.XTweets
+
   def start_link(_opts) do
     GenServer.start_link(__MODULE__, %{})
   end
@@ -11,7 +13,7 @@ defmodule KeeleCodes.TweetStreamSimulator do
   end
 
   def handle_continue(_state, state) do
-    tweets = XApi.recent_tweets()
+    tweets = XTweets.all()
 
     schedule_stream()
 
@@ -23,7 +25,7 @@ defmodule KeeleCodes.TweetStreamSimulator do
       case state.tweets do
         [tweet | []] ->
           Phoenix.PubSub.broadcast(KeeleCodes.PubSub, "tweets", {:tweet, tweet})
-          tweets = XApi.recent_tweets()
+          tweets = XTweets.all()
           Map.put(state, :tweets, tweets)
 
         [tweet | rest] ->

@@ -2,7 +2,7 @@ defmodule XApi.DevAdapter do
   @moduledoc false
 
   def recent_tweets() do
-    recent_tweets_stub()["data"]
+    {:ok, recent_tweets_stub()["data"]}
   end
 
   defp recent_tweets_stub() do
