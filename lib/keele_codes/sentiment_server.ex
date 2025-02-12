@@ -6,7 +6,7 @@ defmodule KeeleCodes.SentimentServer do
   @tokenizer "vinai/bertweet-base"
 
   def start_link(_opts) do
-    GenServer.start_link(__MODULE__, %{}, name: __MODULE__)
+    GenServer.start_link(__MODULE__, %{})
   end
 
   def init(state) do
@@ -27,24 +27,22 @@ defmodule KeeleCodes.SentimentServer do
     end
   end
 
-  def handle_info({:tweet, text}, state) do
-    result = Nx.Serving.run(state.serving, text)
-    sentiment = form_sentiment(text, result.predictions)
+  def handle_info({:tweet, tweet}, state) do
+    result = Nx.Serving.run(state.serving, tweet["text"])
+    tweet_sentiment = form_tweet_sentiment(tweet, result.predictions)
 
-    Phoenix.PubSub.broadcast(KeeleCodes.PubSub, "sentiment", {:sentiment, sentiment})
+    Phoenix.PubSub.broadcast(
+      KeeleCodes.PubSub,
+      "tweet_sentiment",
+      {:tweet_sentiment, tweet_sentiment}
+    )
 
     {:noreply, state}
   end
 
-  def handle_info(_, state) do
-    {:noreply, state}
-  end
+  defp form_tweet_sentiment(tweet, predictions) do
+    sentiment = Enum.into(predictions, %{}, &{String.downcase(&1.label), trunc(&1.score * 100)})
 
-  defp form_sentiment(text, predictions) do
-    predictions
-    |> Enum.into(%{}, fn pred ->
-      {String.downcase(pred.label), Float.round(pred.score, 2) * 100}
-    end)
-    |> Map.put("text", text)
+    Map.put(tweet, "sentiment", sentiment)
   end
 end
