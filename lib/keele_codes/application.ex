@@ -20,6 +20,7 @@ defmodule KeeleCodes.Application do
       # {KeeleCodes.Worker, arg},
       # Start to serve requests, typically the last entry
       KeeleCodesWeb.Endpoint,
+      {KeeleCodes.TweetStreamSimulator, []},
       {KeeleCodes.SentimentServer, []}
     ]
 
