@@ -3,8 +3,6 @@ mark keele
 
 welcome to the source code for my website [keele.codes](https://keele.codes/)
 
-my website contains links to various places I hang out on the internet
-
 my website is built using [elixir-lang](https://elixir-lang.org/) and currently runs sentiment analysis on tweets from twitter
 
 the following technologies are used:
