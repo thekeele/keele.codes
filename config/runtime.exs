@@ -61,6 +61,15 @@ if config_env() == :prod do
     ],
     secret_key_base: secret_key_base
 
+  # configure XApi
+  x_api_bearer_token =
+    System.get_env("X_API_BEARER_TOKEN") ||
+      raise """
+      environment variable X_API_BEARER_TOKEN is missing.
+      """
+
+  config :keele_codes, XApi, bearer_token: x_api_bearer_token
+
   # ## SSL Support
   #
   # To get SSL working, you will need to add the `https` key
