@@ -24,7 +24,8 @@ defmodule KeeleCodes.TweetStreamSimulator do
     state =
       case state.tweets do
         [] ->
-          state
+          tweets = XTweets.all()
+          Map.put(state, :tweets, tweets)
 
         [tweet | []] ->
           Phoenix.PubSub.broadcast(KeeleCodes.PubSub, "tweets", {:tweet, tweet})
