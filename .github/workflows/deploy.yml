@@ -1,23 +1,23 @@
-# name: Pull Website
-#
-# on:
-#   push:
-#     branches:
-#     - master
-#
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Pull Website for keele.codes
-#       uses: appleboy/ssh-action@v0.1.5
-#       with:
-#         debug: true
-#         host: ${{ secrets.HOST }}
-#         port: ${{ secrets.PORT }}
-#         username: ${{ secrets.USER }}
-#         key: ${{ secrets.KEY }}
-#         passphrase: ${{ secrets.PASS }}
-#         script: |
-#           cd keele.codes/
-#           git pull origin master
+name: Pull Website
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pull Website for keele.codes
+      uses: appleboy/ssh-action@v0.1.5
+      with:
+        debug: true
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.KEY }}
+        passphrase: ${{ secrets.PASS }}
+        script: |
+          cd keele.codes/
+          git pull origin master
