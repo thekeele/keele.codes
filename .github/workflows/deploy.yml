@@ -18,6 +18,4 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASS }}
-        script: |
-          cd keele.codes/
-          git pull origin master
+        script_path: ./keele_codes_release.sh
