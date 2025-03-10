@@ -1,4 +1,3 @@
-git pull origin master
 mix deps.get --only prod
 mix compile
 mix assets.deploy
