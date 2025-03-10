@@ -18,4 +18,5 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASS }}
-        script_path: rel/scripts/release.sh
+        script: |
+          rel/scripts/release.sh
