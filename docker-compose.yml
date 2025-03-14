@@ -1,7 +1,16 @@
 services:
   app:
     image: thekeele/keele.codes:latest
-    ports:
-      - "4000:4000"
     env_file:
       - .env
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
+    restart: always
