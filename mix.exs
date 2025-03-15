@@ -60,7 +60,8 @@ defmodule KeeleCodes.MixProject do
       {:bandit, "~> 1.5"},
       {:exsync, "~> 0.4.1", only: :dev},
       {:bumblebee, "~> 0.6.0"},
-      {:exla, ">= 0.0.0"}
+      {:exla, ">= 0.0.0"},
+      {:prom_ex, "~> 1.11.0"}
     ]
   end
 
