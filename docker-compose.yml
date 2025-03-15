@@ -1,5 +1,8 @@
 services:
   app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: thekeele/keele.codes:latest
     env_file:
       - .env
@@ -14,6 +17,9 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - certbot-web:/usr/share/nginx/html   # For Let's Encrypt challenges
       - certbot-certs:/etc/letsencrypt      # Store certificates
+    environment:
+      - NGINX_SERVER_NAME=keele.codes
+    entrypoint: ["/bin/sh", "-c", "echo 'ssl_certificate /etc/letsencrypt/live/keele.codes/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/keele.codes/privkey.pem;' > /etc/nginx/ssl.conf && nginx -g 'daemon off;'"]
     depends_on:
       - app
     restart: always
@@ -30,6 +36,28 @@ services:
       - nginx
     restart: always
 
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml  # Prometheus config
+      - prometheus-data:/prometheus                      # Persist metrics
+    restart: always
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "4200:3000"        # Grafana runs on 4200 (maps to internal 3000)
+    volumes:
+      - grafana-data:/var/lib/grafana            # Persist Grafana data
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin             # Default admin user
+      - GF_SECURITY_ADMIN_PASSWORD=admin         # Default password (change in prod)
+    depends_on:
+      - prometheus
+    restart: always
+
 volumes:
   certbot-web:      # Define the certbot-web volume
   certbot-certs:    # Define the certbot-certs volume
+  prometheus-data:   # For Prometheus metrics
+  grafana-data:      # For Grafana dashboards and settings

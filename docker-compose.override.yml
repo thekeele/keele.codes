@@ -1,0 +1,22 @@
+services:
+  app:
+    ports:
+      - "4000:4000"
+
+  nginx:
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx-ssl/selfsigned.crt:/etc/nginx/ssl/selfsigned.crt
+      - ./nginx-ssl/selfsigned.key:/etc/nginx/ssl/selfsigned.key
+    environment:
+      - NGINX_SERVER_NAME=localhost
+    entrypoint: ["/bin/sh", "-c", "echo 'ssl_certificate /etc/nginx/ssl/selfsigned.crt; ssl_certificate_key /etc/nginx/ssl/selfsigned.key;' > /etc/nginx/ssl.conf && nginx -g 'daemon off;'"]
+
+  certbot:
+    deploy:
+      mode: replicated
+      replicas: 0
+
+  prometheus:
+    ports:
+      - "4100:9090"

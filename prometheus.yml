@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s  # How often to scrape metrics
+
+scrape_configs:
+  - job_name: 'app'
+    static_configs:
+      - targets: ['app:4000']  # Scrape metrics from the app service on port 4000
+    metrics_path: /metrics     # Default path for prom_ex
