@@ -41,3 +41,6 @@ npm-debug.log
 
 # ignore environment files
 .env
+
+# ignore self signed certs
+nginx-ssl/
