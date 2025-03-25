@@ -19,7 +19,7 @@ install:
 # Build Docker images
 build:
 	@echo "Building Docker images..."
-	docker-compose -f docker-compose.yml build
+	docker compose -f docker-compose.yml build
 
 # Generate self-signed certificates for local development
 selfsigned:
@@ -38,19 +38,19 @@ certbot:
 # Start local environment with override
 local: selfsigned
 	@echo "Starting local environment..."
-	docker-compose up -d
+	docker compose up -d
 
 # Start production environment (base file only)
 prod:
 	@echo "Starting production environment..."
-	docker-compose -f docker-compose.yml up -d
+	docker compose -f docker-compose.yml up -d
 
 # Stop all services
 stop:
 	@echo "Stopping all services..."
-	docker-compose down
+	docker compose down
 
 # Stop and remove volumes (clean slate)
 clean:
 	@echo "Cleaning up services and volumes..."
-	docker-compose down -v
+	docker compose down -v
