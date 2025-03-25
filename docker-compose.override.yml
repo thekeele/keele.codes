@@ -16,7 +16,3 @@ services:
     deploy:
       mode: replicated
       replicas: 0
-
-  prometheus:
-    ports:
-      - "4100:9090"
