@@ -1,20 +1,20 @@
 #!/bin/bash
+# Start app and nginx on port 80
+docker compose up -d app nginx
 
-# Start Nginx in the background
-docker compose up -d nginx
-
-# Wait to ensure Nginx is fully up
-sleep 5
-
-# Run Certbot with an explicit entrypoint override to force certificate issuance
-docker compose run --rm --entrypoint "certbot" certbot certonly \
-  --webroot \
-  --webroot-path=/var/www/html \
+# Get certs
+docker compose up -d certbot
+docker exec keelecodes-certbot-1 certbot certonly \
+  --webroot -w /var/www/html \
   -d keele.codes \
-  --email mark@keele.codes \
-  --agree-tos \
-  --no-eff-email \
-  --force-renewal
+  -m your-email@example.com \
+  --agree-tos --non-interactive
 
-# Stop services after certificate is obtained
-docker compose down
+# Stop nginx to swap configs
+docker compose stop nginx
+
+# Switch to SSL config
+cp nginx-ssl.conf nginx.conf
+
+# Restart with SSL
+docker compose up -d nginx
