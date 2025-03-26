@@ -41,4 +41,6 @@ defmodule KeeleCodesWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
+
+  match :*, "/*path", KeeleCodesWeb.Plugs.FallbackPlug, []
 end
