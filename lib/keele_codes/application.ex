@@ -8,7 +8,6 @@ defmodule KeeleCodes.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      KeeleCodes.PromEx,
       KeeleCodesWeb.Telemetry,
       KeeleCodes.Repo,
       {Ecto.Migrator,
