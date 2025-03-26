@@ -1,11 +1,8 @@
 #!/bin/bash
-# Switch to certbot nginx config
-cp nginx-certbot.conf nginx.conf
+docker compose up -d app
 
-# Start app and nginx on port 80
-docker compose up -d app nginx
+docker compose up -d nginx --command "nginx -c /etc/nginx/nginx-certbot.conf -g 'daemon off;'"
 
-# Get certs
 docker compose up -d certbot
 
 docker exec keelecodes-certbot-1 certbot certonly \
@@ -15,8 +12,4 @@ docker exec keelecodes-certbot-1 certbot certonly \
   -m mark@keele.codes \
   --agree-tos --non-interactive
 
-# Switch to SSL nginx config
-cp nginx-ssl.conf nginx.conf
-
-# Restart nginx
-docker compose up -d nginx
+docker compose stop certbot nginx app
