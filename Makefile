@@ -16,7 +16,7 @@ install:
 
 build:
 	@echo "Building and Pushing Local Docker Image..."
-	docker build -t thekeele/keele.codes:latest
+	docker build -t thekeele/keele.codes:latest .
 	docker push thekeele/keele.codes:latest
 
 certbot:
