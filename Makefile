@@ -15,8 +15,9 @@ install:
 	@echo "Docker and Docker Compose installed. Log out and back in to use docker without sudo, or run 'newgrp docker'."
 
 build:
-	@echo "Building Docker images..."
-	docker compose -f docker-compose.yml build
+	@echo "Building and Pushing Local Docker Image..."
+	docker build -t thekeele/keele.codes:latest
+	docker push thekeele/keele.codes:latest
 
 certbot:
 	@echo "Running Certbot setup script..."
