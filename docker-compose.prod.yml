@@ -1,0 +1,35 @@
+services:
+  app:
+    image: thekeele/keele.codes:latest
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx-ssl.conf:/etc/nginx/nginx.conf
+      - certbot-web:/usr/share/nginx/html
+      - certbot-certs:/etc/letsencrypt
+    depends_on:
+      - app
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - certbot-web:/var/www/html
+      - certbot-certs:/etc/letsencrypt
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    depends_on:
+      - nginx
+    restart: unless-stopped
+
+volumes:
+  certbot-web:
+  certbot-certs:

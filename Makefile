@@ -1,4 +1,4 @@
-.PHONY: local prod build certbot stop clean install
+.PHONY: local prod build stop clean install
 
 all: local
 
@@ -19,25 +19,24 @@ build:
 	docker build -t thekeele/keele.codes:latest .
 	docker push thekeele/keele.codes:latest
 
-certbot:
-	@echo "Running Certbot setup script..."
-	./setup-certbot.sh
-
 local:
 	@echo "Starting local environment..."
-	docker compose -f docker-compose.yml up -d app nginx  # HTTP only	
+	docker compose -f docker-compose.yml up -d
 
 prod:
 	@echo "Starting production environment..."
-	docker compose -f docker-compose.yml -e NGINX_COMMAND="nginx -c /etc/nginx/nginx-ssl.conf -g 'daemon off;'" up -d nginx app certbot
+	docker compose -f docker-compose.prod.yml up -d
 
 stop:
 	@echo "Stopping all services..."
-	docker compose down
+	docker compose -f docker-compose.yml down
+	docker compose -f docker-compose.prod.yml down
+
 
 clean:
 	@echo "Cleaning up services and volumes..."
-	docker compose down -v
+	docker compose -f docker-compose.yml down -v
+	docker compose -f docker-compose.prod.yml down -v
 
 prune:
 	@echo "Pruning docker..."
