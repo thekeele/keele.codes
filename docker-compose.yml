@@ -18,7 +18,7 @@ services:
       - ./nginx-certbot.conf:/etc/nginx/nginx-certbot.conf # for generating certificates
       - certbot-web:/usr/share/nginx/html
       - certbot-certs:/etc/letsencrypt
-    command: ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
+    command: ["sh", "-c", "$${NGINX_COMMAND:-nginx -c /etc/nginx/nginx.conf -g 'daemon off;'}"]
     depends_on:
       - app
     restart: unless-stopped

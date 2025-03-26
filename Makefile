@@ -29,7 +29,7 @@ local:
 
 prod:
 	@echo "Starting production environment..."
-	docker compose -f docker-compose.yml up -d --command "nginx -c /etc/nginx/nginx-ssl.conf -g 'daemon off;'" nginx
+	docker compose -f docker-compose.yml up -d nginx app certbot -e NGINX_COMMAND="nginx -c /etc/nginx/nginx-ssl.conf -g 'daemon off;'"
 
 stop:
 	@echo "Stopping all services..."
