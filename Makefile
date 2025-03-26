@@ -37,3 +37,7 @@ stop:
 clean:
 	@echo "Cleaning up services and volumes..."
 	docker compose down -v
+
+prune:
+	@echo "Pruning docker..."
+	docker system prune -a
