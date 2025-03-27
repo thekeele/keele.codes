@@ -1,4 +1,4 @@
-.PHONY: local prod build stop clean install
+.PHONY: install local staging prod stop clean prune
 
 all: local
 
@@ -14,14 +14,13 @@ install:
 	sudo apt install -y docker-compose-plugin
 	@echo "Docker and Docker Compose installed. Log out and back in to use docker without sudo, or run 'newgrp docker'."
 
-build:
-	@echo "Building and Pushing Local Docker Image..."
-	docker build -t thekeele/keele.codes:latest .
-	docker push thekeele/keele.codes:latest
-
 local:
 	@echo "Starting local environment..."
 	docker compose -f docker-compose.yml up -d
+
+staging:
+	@echo "Starting staging environment..."
+	docker compose -f docker-compose.staging.yml up -d
 
 prod:
 	@echo "Starting production environment..."
@@ -31,7 +30,6 @@ stop:
 	@echo "Stopping all services..."
 	docker compose -f docker-compose.yml down
 	docker compose -f docker-compose.prod.yml down
-
 
 clean:
 	@echo "Cleaning up services and volumes..."
