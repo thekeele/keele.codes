@@ -9,6 +9,7 @@ defmodule KeeleCodes.Application do
   def start(_type, _args) do
     children = [
       KeeleCodesWeb.Telemetry,
+      {KeeleCodesWeb.LiveMonitor, []},
       KeeleCodes.Repo,
       {Ecto.Migrator,
        repos: Application.fetch_env!(:keele_codes, :ecto_repos), skip: skip_migrations?()},

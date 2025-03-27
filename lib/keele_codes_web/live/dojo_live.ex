@@ -4,6 +4,7 @@ defmodule KeeleCodesWeb.DojoLive do
   def mount(_params, _session, socket) do
     if connected?(socket) do
       Phoenix.PubSub.subscribe(KeeleCodes.PubSub, "tweet_sentiment")
+      KeeleCodesWeb.LiveMonitor.monitor(self(), %{mount_time: System.monotonic_time()})
     end
 
     socket =
@@ -38,6 +39,16 @@ defmodule KeeleCodesWeb.DojoLive do
     {:noreply, socket}
   end
 
+  def handle_event("link_clicked", %{"link" => link}, socket) do
+    :telemetry.execute(
+      [:keele_codes, :dojo_live, :link_clicked],
+      %{link: link},
+      %{}
+    )
+
+    {:noreply, socket}
+  end
+
   def render(assigns) do
     ~H"""
     <div class="flex flex-col gap-y-8">
@@ -64,10 +75,17 @@ defmodule KeeleCodesWeb.DojoLive do
   defp code_links(assigns) do
     ~H"""
     <div class="flex flex-col justify-center">
-      <a href="https://github.com/thekeele" class="font-mono text-4xl text-sky-600 hover:text-sky-800">
+      <a
+        phx-click="link_clicked"
+        phx-value-link="github"
+        href="https://github.com/thekeele"
+        class="font-mono text-4xl text-sky-600 hover:text-sky-800"
+      >
         github
       </a>
       <a
+        phx-click="link_clicked"
+        phx-value-link="exercism"
         href="https://exercism.io/profiles/thekeele"
         class="font-mono text-4xl text-sky-600 hover:text-sky-800"
       >
@@ -80,10 +98,17 @@ defmodule KeeleCodesWeb.DojoLive do
   defp career_links(assigns) do
     ~H"""
     <div class="flex flex-col justify-center">
-      <a href="https://keele.codes/resume" class="font-mono text-4xl text-sky-600 hover:text-sky-800">
+      <a
+        phx-click="link_clicked"
+        phx-value-link="resume"
+        href="https://keele.codes/resume"
+        class="font-mono text-4xl text-sky-600 hover:text-sky-800"
+      >
         résumé
       </a>
       <a
+        phx-click="link_clicked"
+        phx-value-link="linkedin"
         href="https://www.linkedin.com/in/thekeele"
         class="font-mono text-4xl text-sky-600 hover:text-sky-800"
       >
@@ -96,17 +121,26 @@ defmodule KeeleCodesWeb.DojoLive do
   defp contact_links(assigns) do
     ~H"""
     <div class="flex flex-col justify-center">
-      <a href="mailto:mark@keele.codes" class="font-mono text-lg text-white hover:text-gray-600">
+      <a
+        phx-click="link_clicked"
+        phx-value-link="email"
+        href="mailto:mark@keele.codes"
+        class="font-mono text-lg text-white hover:text-gray-600"
+      >
         <.icon name="hero-envelope-solid" class="w-8 h-8 bg-white" /> mark@keele.codes
       </a>
       <div class="flex flex-row justify-between items-center">
-        <a href="https://www.instagram.com/markiepooshreds/">
+        <a
+          phx-click="link_clicked"
+          phx-value-link="instagram"
+          href="https://www.instagram.com/markiepooshreds/"
+        >
           <img class="w-8 h-5 rounded-sm" src={~p"/images/logo.png"} />
         </a>
 
         <p class="font-mono text-2xl dark:text-gray-600">made w/</p>
 
-        <a href="https://keele.codes/bitcoin">
+        <a phx-click="link_clicked" phx-value-link="bitcoin" href="https://keele.codes/bitcoin">
           <.icon name="hero-heart-solid" class="w-7 h-7 bg-red-600 hover:bg-orange-600" />
         </a>
       </div>

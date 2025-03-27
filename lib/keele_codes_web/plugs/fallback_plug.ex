@@ -11,4 +11,3 @@ defmodule KeeleCodesWeb.Plugs.FallbackPlug do
     |> halt()
   end
 end
-
