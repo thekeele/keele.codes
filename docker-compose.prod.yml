@@ -16,6 +16,8 @@ services:
       - ./nginx-ssl.conf:/etc/nginx/nginx.conf
       - certbot-web:/usr/share/nginx/html
       - certbot-certs:/etc/letsencrypt
+      - /home/mark/resume:/home/mark/resume:ro
+      - /home/mark/bitcoin:/home/mark/bitcoin:ro
     depends_on:
       - app
     restart: unless-stopped
