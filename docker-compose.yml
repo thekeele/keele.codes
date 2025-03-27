@@ -1,6 +1,8 @@
 services:
   app:
-    image: thekeele/keele.codes:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "4000:4000"
     env_file:
@@ -14,6 +16,8 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf # local
       - ./nginx-certbot.conf:/etc/nginx/nginx-certbot.conf # certificate generation
+      - /Users/mark/code/resume:/Users/mark/code/resume:ro
+      - /Users/mark/code/bitcoin:/Users/mark/code/bitcoin:ro
     depends_on:
       - app
     restart: unless-stopped
