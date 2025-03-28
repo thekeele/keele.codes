@@ -23,8 +23,8 @@ staging:
 	docker compose -f docker-compose.staging.yml up -d
 
 push:
-  @echo "Pushing latest docker image..."
-  docker push thekeele/keele.codes:latest
+	@echo "Pushing latest docker image..."
+	docker push thekeele/keele.codes:latest
 
 prod:
 	@echo "Starting production environment..."
