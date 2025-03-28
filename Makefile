@@ -1,4 +1,4 @@
-.PHONY: install local staging push prod stop clean prune
+.PHONY: install local staging build push prod stop clean prune
 
 all: local
 
@@ -21,6 +21,10 @@ local:
 staging:
 	@echo "Starting staging environment..."
 	docker compose -f docker-compose.staging.yml up -d
+
+build:
+	@echo "Building latest docker image..."
+	docker build -t thekeele/keele.codes:latest
 
 push:
 	@echo "Pushing latest docker image..."
