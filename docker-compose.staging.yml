@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: thekeele/keele.codes:latest
     ports:
       - "4000:4000"
     env_file:

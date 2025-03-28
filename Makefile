@@ -24,7 +24,7 @@ staging:
 
 build:
 	@echo "Building latest docker image..."
-	docker build -t thekeele/keele.codes:latest
+	docker build -t thekeele/keele.codes:latest .
 
 push:
 	@echo "Pushing latest docker image..."
