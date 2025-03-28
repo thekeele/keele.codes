@@ -1,4 +1,4 @@
-.PHONY: install local staging prod stop clean prune
+.PHONY: install local staging push prod stop clean prune
 
 all: local
 
@@ -22,6 +22,10 @@ staging:
 	@echo "Starting staging environment..."
 	docker compose -f docker-compose.staging.yml up -d
 
+push:
+  @echo "Pushing latest docker image..."
+  docker push thekeele/keele.codes:latest
+
 prod:
 	@echo "Starting production environment..."
 	docker compose -f docker-compose.prod.yml up -d
@@ -29,11 +33,13 @@ prod:
 stop:
 	@echo "Stopping all services..."
 	docker compose -f docker-compose.yml down
+	docker compose -f docker-compose.staging.yml down
 	docker compose -f docker-compose.prod.yml down
 
 clean:
 	@echo "Cleaning up services and volumes..."
 	docker compose -f docker-compose.yml down -v
+	docker compose -f docker-compose.staging.yml down -v
 	docker compose -f docker-compose.prod.yml down -v
 
 prune:
